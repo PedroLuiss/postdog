@@ -1,0 +1,21 @@
+@import "../../../../../assets/styles/variables_postdog";
+
+.alert-row-skeleton {
+  border-bottom: 1px solid #e5e7eb;
+
+  &__td {
+    padding: 1rem;
+    vertical-align: middle;
+
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__date-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

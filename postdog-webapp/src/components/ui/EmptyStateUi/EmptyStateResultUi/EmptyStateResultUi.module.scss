@@ -1,0 +1,68 @@
+@import '../../../../assets/styles/variables_postdog';
+
+.empty-state-result {
+    background-color: #fff;
+    border: 1px solid #e5e7eb; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: 640px) {
+        padding: 3rem; 
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 32rem; 
+        margin: 0 auto;
+        gap: 1rem; 
+    }
+
+    &__icon-circle {
+        width: 4rem; 
+        height: 4rem; 
+        background-color: #f3f4f6; 
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9ca3af; 
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; 
+    }
+
+    &__title {
+        font-size: 1.25rem; 
+        font-weight: 600;
+        color: #111827; 
+        margin: 0;
+    }
+
+    &__description {
+        font-size: 0.875rem; 
+        color: #4b5563; 
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    &__actions {
+        padding-top: 1rem; 
+    }
+}

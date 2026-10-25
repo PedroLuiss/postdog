@@ -1,0 +1,139 @@
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .header-flex {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .icon-box-minimal {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+            color: #374151;
+        }
+    }
+
+    .header-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #111827;
+        margin: 0;
+    }
+
+    .items-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .item-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label-base {
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 2px;
+    }
+
+    .value-base {
+        font-size: 14px;
+        color: #111827;
+        line-height: 1.4;
+    }
+
+    .label-rfc {
+        font-weight: 400;
+        color: #6b7280;
+        font-size: 12px;
+    }
+
+    .value-rfc {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .label-razon {
+        font-weight: 400;
+        color: #6b7280;
+        font-size: 11px;
+    }
+
+    .value-razon {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .label-cp {
+        font-weight: 400;
+        color: #6b7280;
+        font-size: 11px;
+    }
+
+    .value-cp {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .label-uso {
+        font-weight: 400;
+        color: #6b7280;
+        font-size: 11px;
+    }
+
+    .value-uso {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .btn-outline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 8px 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background-color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: 16px;
+        line-height: 20px;
+
+        &:hover {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+            color: #111827;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        &:active {
+            background-color: #f3f4f6;
+            transform: translateY(0.5px);
+        }
+
+        .icon-spacing {
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+    }
+}

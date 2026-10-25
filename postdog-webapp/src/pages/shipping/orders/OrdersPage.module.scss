@@ -1,0 +1,8 @@
+@import '../../../assets/styles/variables';
+
+.orders-page {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-system;
+  height: 80dvh;
+}

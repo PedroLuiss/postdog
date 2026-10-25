@@ -1,0 +1,44 @@
+@import "../../../assets/styles/_variables_postdog.scss";
+
+.users-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  &__card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+    line-height: 1rem;
+  }
+
+  &__value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 2.25rem;
+    margin-bottom: 0;
+  }
+
+  &__unit {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1rem;
+    margin-top: .25rem;
+    margin-bottom: 0;
+  }
+}

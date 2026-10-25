@@ -1,0 +1,80 @@
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #ffb8b8;
+  border-radius: 8px;
+  background-color: #fff2f2;
+  color: #a80000;
+  margin: 16px 0;
+
+
+  &__icon {
+    flex-shrink: 0; 
+    
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+  }
+
+
+  &__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8c0000;
+  }
+
+
+  &__message {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+
+  &__retry-button {
+    margin-left: auto;
+    padding: 8px 16px;
+    border: 1px solid #d8000c;
+    background-color: transparent;
+    color: #d8000c;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: #d8000c;
+      color: white;
+    }
+  }
+
+
+  &--inline {
+    margin: 0;
+    padding: 8px 12px;
+    gap: 8px;
+
+    .error-message__icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .error-message__title {
+        font-size: 0.9rem;
+    }
+     .error-message__message {
+        display: none; 
+    }
+  }
+}

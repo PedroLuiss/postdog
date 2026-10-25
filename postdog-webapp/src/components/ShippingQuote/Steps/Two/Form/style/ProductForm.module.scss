@@ -1,0 +1,63 @@
+@import './form';
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.product {
+    border-bottom: 1px solid #A3A3A3;
+    padding: 0rem 1.33rem 2rem;
+
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 8px;
+
+        &__icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            color: $color-black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 1.2rem !important;
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    &__form-row-price {
+        display: flex;
+        gap: 16px;
+
+        .form-group {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 180px;
+        }
+    }
+
+    &--removing {
+        animation: fadeOut 300ms ease forwards;
+    }
+}

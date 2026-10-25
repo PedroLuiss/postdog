@@ -1,0 +1,61 @@
+.user-modal {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+}
+
+.phone-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: flex-end;
+    width: 100%;
+
+    &__label {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: #374151;
+        line-height: 1;
+    }
+
+    &__content {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    &__select {
+        width: 6rem !important;
+        flex-shrink: 0;
+
+        & > button{
+            justify-content: flex-start !important;
+            padding-left: 0.75rem !important;
+        }
+    }
+
+    &__input {
+        flex: 1;
+    }
+}

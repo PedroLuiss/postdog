@@ -1,0 +1,27 @@
+    @import '../../../../assets/styles/variables';
+
+    .action-button {
+        background-color: #fff;
+        color: #0A0A0A;
+        border: none;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        white-space: nowrap;
+        width: 200px;
+        height: 40px;
+
+        &:hover {
+            background-color: #F5F5F5;
+        }
+
+        svg {
+            vertical-align: middle;
+            margin-left: 8px;
+            color: $color-black;
+            font-size: 0.9rem;
+        }
+    }

@@ -1,0 +1,202 @@
+@import '../../../assets/styles/variables';
+
+.unsubscribe-header {
+    background-color: $color-primary;
+    border-bottom: none;
+    box-shadow: none;
+    height: $header-height;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (min-width: 1024px) {
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__logo-img {
+        height: 40px;
+        width: auto;
+        filter: brightness(0) invert(1);
+    }
+
+    &__logo-text {
+        font-family: $font-family-inter;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-gray-900;
+        letter-spacing: -0.025em;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background-color: $color-gray-50;
+        padding: 0.4rem 0.5rem;
+        border-radius: 9999px;
+        border: 1px solid $color-gray-200;
+        transition: all 0.2s ease;
+
+        @media (min-width: 641px) {
+            gap: 1.25rem;
+            padding: 0.5rem 0.75rem;
+            padding-right: 0.5rem;
+        }
+
+        &:hover {
+            border-color: $color-gray-300;
+            background-color: $color-white;
+            box-shadow: $box-shadow-sm;
+        }
+    }
+
+    &__user-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        @media (min-width: 641px) {
+            gap: 0.75rem;
+        }
+    }
+
+    &__avatar {
+        width: 28px;
+        height: 28px;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-primary;
+        border: 1px solid $color-gray-200;
+        flex-shrink: 0;
+
+        @media (min-width: 641px) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__details {
+        display: none;
+        flex-direction: column;
+        line-height: 1.2;
+
+        @media (min-width: 641px) {
+            display: flex;
+        }
+    }
+
+    &__name {
+        font-size: 0.8125rem;
+        font-weight: 700;
+        color: $color-gray-900;
+    }
+
+    &__email {
+        font-size: 0.75rem;
+        color: $color-gray-400;
+    }
+
+    &__divider {
+        width: 1px;
+        height: 16px;
+        background-color: $color-gray-300;
+
+        @media (min-width: 641px) {
+            height: 20px;
+        }
+    }
+
+    &__btn-dashboard,
+    &__btn-logout {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: $color-gray-600;
+
+        @media (min-width: 641px) {
+            width: 32px;
+            height: 32px;
+        }
+
+        &:hover {
+            background-color: $color-gray-100;
+            color: $color-gray-900;
+        }
+    }
+
+    &__btn-logout:hover {
+        background-color: $color-red-50-alpha;
+        color: $color-primary;
+    }
+
+    &__btn-login {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $color-gray-600;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-gray-900;
+        }
+    }
+
+    &__btn-register {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $color-white;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: darken($color-primary, 5%);
+        }
+    }
+}

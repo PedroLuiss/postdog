@@ -1,0 +1,351 @@
+.postdog-feature-section {
+    padding: 1px 0;
+    padding-bottom: 38px;
+    text-align: left;
+    background-color: #F5F5F5;
+}
+
+.postdog-feature-section__container {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
+}
+
+.postdog-feature-section__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #18181B;
+    margin-bottom: 8px;
+}
+
+.postdog-feature-section__subtitle {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.postdog-feature-section__slider-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.postdog-feature-section__slider {
+    padding: 10px 0;
+}
+
+.postdog-feature-section__nav {
+    display: flex;
+    justify-content: center;
+    gap: 47px;
+    margin-top: 102px;
+}
+
+.postdog-feature-section__text--accent {
+    color: #DC2626;
+}
+
+
+.card-postdog {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 14px 0 rgb(0 0 0 / 13%);
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: left;
+    padding: 10px;
+    width: 500px;
+    /* max-height: 500px; */
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.card-postdog:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.card-postdog__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 300px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+    background: linear-gradient(0deg, #000000, #171717);
+}
+
+.card-postdog:hover .card-postdog__image-container {
+    background: linear-gradient(0deg, #B91C1C, #DC2626);
+}
+
+.card-postdog__image--original {
+    opacity: 1;
+}
+
+.card-postdog__image--hover {
+    opacity: 0;
+}
+
+.card-postdog:hover .card-postdog__image--original {
+    opacity: 0;
+}
+
+.card-postdog:hover .card-postdog__image--hover {
+    opacity: 1;
+}
+
+
+.card-postdog:hover .card-postdog__link {
+    color: #DC2626;
+}
+
+
+
+.card-postdog__image {
+    height: 138px;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-postdog__body {
+    padding: 23.48px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-postdog__title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #18181B;
+}
+
+.card-postdog__text {
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 500;
+}
+
+.card-postdog__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    justify-content: end;
+}
+
+.card-postdog__link:hover {
+    color: #DC2626;
+}
+
+.card-postdog__link:hover svg {
+    transform: translateX(4px);
+}
+
+
+
+
+:global(.swiper-pagination-bullet-active) {
+    background: #DC2626 !important;
+}
+
+:global(.swiper-button-prev--custom),
+:global(.swiper-button-next--custom) {
+    color: #18181B !important;
+    position: static;
+
+}
+
+:global(.swiper-button-prev--custom)::after,
+:global(.swiper-button-next--custom)::after {
+    font-size: 27px !important;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1440px) {
+    .postdog-feature-section__container {
+        max-width: 1082px;
+    }
+
+    .card-postdog {
+        max-width: 410px;
+        width: 100%;
+        height: 406px;
+    }
+
+    .card-postdog__image {
+        height: 141px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .postdog-feature-section__title {
+        font-size: 28px;
+
+    }
+
+    .postdog-feature-section__container {
+        max-width: 703px;
+        padding: 0;
+    }
+
+    .postdog-feature-section {
+        padding: 37px 11px 63px;
+    }
+
+    .postdog-feature-section__subtitle {
+        font-size: 20px;
+    }
+
+    .postdog-feature-section__slider {
+        padding: 10px 0 52px;
+    }
+
+    .card-postdog {
+        width: 303px;
+        height: 300px;
+    }
+
+    .card-postdog__title {
+        font-size: 12px;
+    }
+
+    .card-postdog__text {
+        font-size: 10px;
+    }
+
+    .card-postdog__image-container {
+        height: 180px;
+    }
+
+    .card-postdog__body {
+        padding: 9px 4px 3px;
+    }
+
+    .card-postdog__link {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .card-postdog__image {
+        height: 105px;
+    }
+
+    .postdog-feature-section__nav {
+        gap: 14px;
+        margin-top: 81px;
+    }
+
+    :global(.swiper-button-prev--custom)::after,
+    :global(.swiper-button-next--custom)::after {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .postdog-feature-section {
+        padding-top: 0;
+        padding-bottom: 36px;
+        text-align: center !important;
+    }
+
+    .postdog-feature-section__title {
+        font-size: 20px;
+    }
+
+    .postdog-feature-section__subtitle {
+        font-size: 14px;
+    }
+
+    .postdog-feature-section__slider {
+        padding-bottom: 62px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .postdog-feature-section {
+        padding-top: 17px;
+        text-align: center !important;
+    }
+
+
+    .card-postdog {
+        width: 230px;
+        height: 230px;
+        padding: 7px;
+    }
+
+    .card-postdog__image-container {
+        height: 138px;
+    }
+
+    .card-postdog__image {
+        height: 70px;
+    }
+
+    .card-postdog__title {
+        font-size: 8px;
+        margin-bottom: 3px;
+    }
+
+    .card-postdog__text {
+        font-size: 8px;
+    }
+
+    .card-postdog__link {
+        margin-top: 3px;
+        font-size: 8px;
+    }
+
+    .postdog-feature-section__slider {
+        padding-bottom: 60px;
+    }
+
+    :global(.swiper-slide-active) {
+
+        .card-postdog {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+
+        .card-postdog__link {
+            color: #DC2626;
+        }
+/* 
+        .card-postdog .card-postdog__image-container {
+            background: linear-gradient(315deg, #B91C1C, #DC2626);
+        } */
+
+        .card-postdog__image--original {
+            opacity: 1;
+        }
+
+        .card-postdog__image--hover {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+
+@import '../../../../../assets/styles/variables';
+
+
+$label-color: #495057;
+
+.remitter-form {
+
+  &__sub-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-black;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  &__grid--location {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: $color-black;
+    font-weight: 500;
+  }
+
+  &__input {
+    padding: 0.3rem 1rem;
+    border: 1px solid $color-black;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: 40px;
+
+    &:focus {
+      outline: none;
+      border-color: #0d1218;
+      box-shadow: 0 0 0 0.2rem rgb(12 15 18 / 25%);
+    }
+
+    &--disabled {
+      background-color: #F1F3F5;
+      cursor: not-allowed;
+      color: $label-color;
+    }
+  }
+
+  &__phone-group {
+    display: flex;
+  }
+
+  
+}
+
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 14px;
+  color: $color-black;
+  user-select: none;
+  font-weight: 500;
+  margin-top: 0; 
+
+  &__input {
+    display: none;
+  }
+
+  &__slider {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background-color: #CED4DA;
+    border-radius: 24px;
+    transition: background-color 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: white;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+
+  &__input:checked + &__slider {
+    background-color: $color-primary;
+
+    &::before {
+      transform: translateX(20px);
+    }
+  }
+}
+
+
+.input--error {
+    border-color: #d32f2f !important; 
+    background-color: #fff6f6 !important;
+    
+    &:focus {
+        border-color: #d32f2f !important;
+        box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+    }
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}

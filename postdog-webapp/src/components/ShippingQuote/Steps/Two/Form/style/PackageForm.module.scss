@@ -1,0 +1,223 @@
+@import './form';
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.package {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.26);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__heading {
+        position: relative;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1a1a1a;
+        padding-right: 27px;
+    }
+
+    &__number-badge {
+        position: absolute;
+        top: -7px;
+        right: 2px;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+        user-select: none;
+
+        p {
+            line-height: 0;
+        }
+    }
+
+    .search-input {
+        position: relative;
+
+        &__results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            z-index: 10;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        &__result-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $font-family-Work-Sans;
+
+            &:hover {
+                background-color: #f5f5f5;
+            }
+
+            &--no-results {
+                padding: 10px 15px;
+                color: #888;
+                font-style: italic;
+            }
+        }
+    }
+
+    &__icon svg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 8px;
+
+        &__icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            color: $color-black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 1.2rem !important;
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    &__products {
+        border-top: none;
+    }
+
+    &__products-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+
+        &__icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            color: $color-black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 2rem !important;
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    &__products-heading {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__product-count {
+        background-color: #0A0A0A;
+        color: #ffffff;
+        font-size: 12px;
+        padding: 3px 14px;
+        border-radius: 3px;
+        font-weight: normal;
+        margin-left: 8px;
+    }
+
+    &__products-list {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .btn {
+            position: fixed;
+            bottom: 6.4rem;
+            right: 1rem;
+            height: 30px;
+        }
+
+        .btn--edit {
+            background-color: #ffffff00;
+            color: $color-black;
+            border: 1px solid $color-black;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            align-self: flex-start;
+            width: 170px;
+            height: 30px;
+            padding: 0.4px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0px auto;
+            margin-bottom: 19px;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+          
+        }
+
+        .btn-no-product {
+            margin: auto;
+            position: static;
+            margin-bottom: 18px;
+        }
+    }
+
+    &--removing {
+        animation: fadeOut 300ms ease forwards;
+    }
+}

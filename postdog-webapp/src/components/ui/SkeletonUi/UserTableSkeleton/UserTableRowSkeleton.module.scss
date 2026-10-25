@@ -1,0 +1,40 @@
+@import "../../../../assets/styles/_variables_postdog.scss";
+
+.users-table-card {
+  &__tr {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    pointer-events: none; 
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__td {
+    padding: 0.5rem;
+    vertical-align: middle;
+
+    &--check {
+      width: 2.5rem; 
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    &--name {
+      padding: 0.5rem;
+      min-width: 150px;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    white-space: nowrap;
+  }
+}
+
+td > div {
+    display: flex;
+    align-items: center;
+}

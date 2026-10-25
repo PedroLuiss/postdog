@@ -1,0 +1,428 @@
+.section-faq {
+    background-color: #0A0A0A;
+}
+
+.section-postdog__container {
+    max-width: 1170px;
+    margin: 13px auto;
+    width: 100%;
+}
+
+@media (max-width: 1400px) {
+    .section-postdog__container {
+        max-width: 980px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-contact__container {
+        flex-direction: column !important;
+        gap: 40px;
+    }
+
+    .section-contact__left,
+    .section-contact__right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .section-contact__img {
+        margin: 50px 0px auto;
+        max-width: 250px;
+    }
+}
+
+.footer-postdog {
+    background: #F5F5F5;
+    color: #222;
+    font-size: 1rem;
+    padding: 32px 0 0 0;
+    border-top: 1px solid #00000096;
+}
+
+.footer-postdog__container {
+    margin: 0 auto;
+    padding: 30px 77px 0px;
+}
+
+.footer-postdog__main {
+    padding-right: 32px;
+}
+
+.footer-postdog__brand {
+    color: #DC2626;
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer-postdog__desc {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+}
+
+.footer-postdog__newsletter {
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-postdog__label {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.footer-postdog__input {
+    border-radius: 6px;
+    border: 1px solid #000000b5;
+    padding: 4px 10px;
+    font-size: 1rem;
+    width: 250px;
+    height: 35px;
+}
+
+.footer-postdog__newsletter-btn {
+    background: #DC2626;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+    margin-left: 0;
+    max-width: 250px;
+    height: 35px;
+    font-size: 14px;
+    text-shadow: none;
+}
+
+.footer-postdog__newsletter-btn:hover {
+    background: #b91c1c;
+}
+
+.footer-postdog__links {
+    min-width: 180px;
+}
+
+.footer-postdog__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-postdog__nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    display: block;
+    transition: color 0.2s;
+}
+
+.footer-postdog__nav-link.h:hover {
+    color: #b91c1c;
+}
+
+.footer-postdog__nav-link.bold {
+    font-weight: 600;
+}
+
+.footer-postdog__divider {
+    border: none;
+    border-top: 1px solid #0A0A0A;
+    margin: 32px 0 16px 0;
+}
+
+.footer-postdog__bottom {
+    padding-bottom: 20px;
+}
+
+.footer-postdog__bottom a,
+.footer-postdog__bottom p,
+.footer-postdog__bottom span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-postdog__copyright {
+    color: #0A0A0A;
+}
+
+.footer-postdog__legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 50px !important;
+}
+
+.footer-postdog__legal-link {
+    color: #0A0A0A;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.footer-postdog__legal-link:hover {
+    color: #DC2626;
+}
+
+.footer-postdog__social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 50px !important;
+}
+
+.footer-postdog__social-link {
+    color: #A3A3A3;
+    opacity: 0.7;
+    font-size: 1.3rem;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.footer-postdog__social-link:hover {
+    color: #DC2626;
+    opacity: 1;
+}
+
+.footer-postdog__social-link:hover svg {
+    fill: #DC2626;
+}
+
+@media (max-width: 1440px) {
+
+    .footer-postdog__desc,
+    .footer-postdog__label {
+        font-size: 12px;
+    }
+
+    .footer-postdog__brand {
+        font-size: 1.5rem;
+    }
+
+    .footer-postdog__input {
+        max-width: 200px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .footer-postdog__newsletter-btn {
+        max-width: 200px;
+        height: 30px;
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .footer-postdog__nav-link,
+    .footer-postdog__bottom a,
+    .footer-postdog__bottom p,
+    .footer-postdog__bottom span {
+        font-size: 12px;
+    }
+
+    .footer-postdog__social-link>svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .footer-postdog__social-list,
+    .footer-postdog__legal-list,
+    .contact-footer {
+        gap: 35px !important;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+    .footer-postdog__container {
+        padding: 4px 45px 0px;
+    }
+
+
+
+    .footer-postdog__legal-list {
+        gap: 27px !important;
+    }
+
+    .footer-postdog__main {
+        padding-right: 0px;
+    }
+
+    .footer-postdog__social-list,
+    .footer-postdog__legal-list,
+    .contact-footer {
+        gap: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-postdog__main {
+        margin-bottom: 0px;
+        text-align: center;
+        padding: 0;
+        width: 32rem;
+    }
+
+    .footer-postdog__links {
+        align-items: center !important;
+        margin-top: 24px;
+    }
+
+    .footer-postdog__legal-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 7px !important;
+        margin-top: 3px;
+        margin-bottom: 5px !important;
+    }
+
+    .footer-postdog__newsletter {
+        flex-flow: column;
+        align-items: center !important;
+        margin-top: 18px;
+    }
+
+    .footer-postdog__bottom {
+        flex-direction: column-reverse !important;
+    }
+
+    .contact-footer {
+        flex-direction: column-reverse;
+        gap: 10px !important;
+    }
+
+    .footer-postdog__desc,
+    .footer-postdog__label {
+        font-size: 10px;
+    }
+
+    .footer-postdog__input {
+        width: 166px !important;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .footer-postdog__newsletter-btn {
+        width: 166px !important;
+        height: 25px;
+        font-size: 10px;
+        padding: 4px 5px;
+    }
+
+    .footer-postdog__nav-link,
+    .footer-postdog__bottom a,
+    .footer-postdog__bottom p,
+    .footer-postdog__bottom span {
+        font-size: 10px;
+    }
+
+    .footer-postdog__divider {
+        max-width: 321px;
+        margin: 1px auto;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .footer-postdog__bottom {
+        padding-bottom: 60px;
+    }
+
+    .footer-postdog__social-link>svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .footer-postdog__social-list {
+        gap: 14px !important;
+    }
+
+    .footer-postdog__social {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .footer-postdog__desc,
+    .footer-postdog__label {
+        font-size: 8px;
+        margin-bottom: 9px !important;
+    }
+
+    .footer-postdog__container {
+        padding: 4px 24px 0px;
+    }
+
+    .footer-postdog__main {
+        padding-left: 0;
+    }
+
+    .footer-postdog__newsletter {
+        margin-top: 8px;
+    }
+
+    .footer-postdog__input {
+        width: 144px !important;
+        height: 21px;
+        font-size: 10px;
+    }
+
+    .footer-postdog__newsletter-btn {
+        width: 144px !important;
+        height: 21px;
+        font-size: 8px;
+    }
+
+    .footer-postdog__nav-link,
+    .footer-postdog__bottom a,
+    .footer-postdog__bottom p,
+    .footer-postdog__bottom span {
+        font-size: 8px;
+    }
+
+    .contact-footer {
+        gap: 3px !important;
+    }
+
+    .footer-postdog__social-list {
+        gap: 10px !important;
+    }
+
+    .footer-postdog__brand {
+        font-size: 1.1rem;
+    }
+
+    .footer-postdog__bottom {
+        padding-bottom: 29px;
+    }
+
+    .footer-postdog__social-link>svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .footer-postdog__divider {
+        margin-bottom: 6px !important;
+    }
+
+    .footer-postdog__top {
+        gap: 10px;
+        padding-bottom: 5px;
+    }
+
+    .footer-postdog__legal-list {
+        gap: 0px !important;
+                margin-top: 0px;
+        margin-bottom: 0px !important;
+    }
+    .footer-postdog__links {
+        margin-top: 0px !important;
+    }
+
+}

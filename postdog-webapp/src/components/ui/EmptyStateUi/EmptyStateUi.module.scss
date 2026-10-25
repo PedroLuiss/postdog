@@ -1,0 +1,92 @@
+@import '../../../assets/styles/variables_postdog';
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem; 
+  text-align: center;
+  width: 100%;
+
+  &__icon-container {
+    width: 5rem; 
+    height: 5rem; 
+    background-color: $red-primary;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.5rem; 
+    color: #fff;
+
+    svg {
+      width: 2.5rem; 
+      height: 2.5rem; 
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: -0.25rem; 
+    right: -0.25rem; 
+    width: 2rem; 
+    height: 2rem; 
+    background-color: #fff;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $red-primary;
+    color: $red-primary;
+
+    svg {
+      width: 1rem; 
+      height: 1rem; 
+    }
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.25rem; 
+    font-weight: 600;
+    color: #111827; 
+
+    @media (min-width: 640px) {
+      font-size: 1.5rem; 
+    }
+  }
+
+  &__description {
+    text-align: center;       
+    color: #374151;           
+    font-size: 1rem;          
+    line-height: 1.75rem;      
+    max-width: 42rem;         
+    margin: 0 auto;           
+    
+    @media (min-width: 640px) {
+      font-size: 1.125rem;    
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+    width: 100%;
+    margin-top: 1rem; 
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      width: auto;
+    }
+  }
+}

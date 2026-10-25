@@ -1,0 +1,50 @@
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .header-flex {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .icon-box-auto {
+        width: 40px;
+        height: 40px;
+        background-color: #fee2e2;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+            color: #dc2626;
+        }
+    }
+
+    .header-title {
+        flex: 1;
+        font-size: 14px;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .billing-switch {
+        /* Alignment handled by flexbox in header-flex */
+    }
+
+    .card-description-text {
+        font-size: 12px;
+        color: #6b7280;
+        line-height: 1.6;
+        margin: 0;
+    }
+}

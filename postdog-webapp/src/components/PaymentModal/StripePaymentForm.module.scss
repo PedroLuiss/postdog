@@ -1,0 +1,215 @@
+$text-color: #ffffff;
+$input-focus-border-color: #ffffff;
+
+%input-base-styles {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+
+    &.StripeElement--focus {
+        border-color: $input-focus-border-color;
+    }
+
+    &:focus {
+        border-color: $input-focus-border-color;
+    }
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $text-color;
+    padding: 10px 52px;
+
+    &__stripe-element-container {
+        @extend %input-base-styles;
+        position: relative;
+
+        .StripeElement {
+            padding-right: 35px;
+        }
+
+        .StripeElement-brandIcon {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__back-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        color: $text-color;
+
+        >svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__label {
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
+
+    &__row {
+        display: flex;
+        gap: 1rem;
+
+        &>.payment-form__group {
+            flex: 1;
+        }
+    }
+
+
+    &__input {
+        @extend %input-base-styles;
+    }
+
+    &__stripe-element-container {
+        @extend %input-base-styles;
+    }
+
+    &__submit-button {
+        background-color: #DC2626;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin-top: 60px;
+
+        &:hover:not(:disabled) {
+            background-color: #c62828;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        &__img-stripe {
+            width: 100px;
+            height: 26px;
+        }
+    }
+
+    &__error {
+        color: #ff4d4f;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
+
+
+.payment-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    color: $text-color;
+    height: 100%;
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem 0;
+    }
+
+    &__message {
+        font-size: 1rem;
+        margin: 0 0 2rem 0;
+        max-width: 350px;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        align-items: center;
+    }
+
+    &__button {
+        background-color: #DC2626;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        max-width: 228px;
+        width: 100%;
+
+        &:hover:not(:disabled) {
+            background-color: #c62828;
+        }
+    }
+
+    &__link-button {
+        background: none;
+        border: none;
+        color: #ffffff;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

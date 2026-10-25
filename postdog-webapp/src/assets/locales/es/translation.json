@@ -1,0 +1,21 @@
+{
+    "dashboard": {
+        "greeting": "¡Hola, {{userName}}!",
+        "subtitle": "Aquí tienes un resumen de tu actividad de envíos.",
+        "quickActions": "Accesos directos",
+        "actions": {
+            "Cotizador": "Cotizador",
+            "Órdenes": "Órdenes",
+            "Facturación": "Facturación",
+            "Direcciones": "Direcciones",
+            "Paquetes": "Paquetes",
+            "Notificaciones": "Notificaciones"
+        },
+        "stats": {
+            "shipments": "Envíos este mes",
+            "pending": "Órdenes pendientes",
+            "transit": "En tránsito",
+            "vsPrevious": "vs mes anterior"
+        }
+    }
+}

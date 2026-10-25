@@ -1,0 +1,82 @@
+@import '../../../../assets/styles/variables';
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th,
+th,
+label,
+div,
+input,
+select,
+button,
+td,
+span {
+    font-family: $font-family-Work-Sans;
+}
+
+
+
+.step-three {
+    background-color: #f7f8fa;
+    height: 100%;
+}
+
+.accordionSummary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    &__logo {
+        max-height: 30px;
+        width: auto;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        strong {
+            font-size: 10px;
+            font-weight: 700;
+            color: $color-black;
+        }
+
+        span {
+            font-size: 10px;
+            font-weight: 600;
+            color: $color-black;
+        }
+    }
+
+    &__price {
+        font-size: 10px;
+        font-weight: 600;
+        color: $color-black;
+    }
+
+    &--placeholder {
+        padding: 9px;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .accordionSummary__message {
+            font-size: 1.1em;
+             color: $color-black;
+            margin: 0;
+            padding: 0 10px; 
+            font-weight: 500;
+        }
+    }
+}

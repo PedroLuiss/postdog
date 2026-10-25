@@ -1,0 +1,8 @@
+@import '../../../assets/styles/variables';
+
+.unsubscribe {
+    min-height: 100vh;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+}

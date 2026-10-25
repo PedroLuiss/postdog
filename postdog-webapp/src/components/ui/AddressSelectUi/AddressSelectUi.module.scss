@@ -1,0 +1,93 @@
+@import '../../../assets/styles/variables_postdog';
+
+.address-select {
+    position: relative;
+    width: 100%;
+
+    &__mx-prefix {
+        font-size: 0.65rem;
+        color: rgb(75 85 99 / 1);
+        font-weight: 500;
+        line-height: 1.25rem;
+    }
+
+    &__chevron {
+        color: #9ca3af;
+        transition: transform 0.2s ease;
+        &--open {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.address-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    overflow: hidden;
+    margin-left: 31px;
+
+    &__header {
+        padding: 0.45rem 0.7rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6b7280;
+        background-color: #fff;
+    }
+
+    &__list {
+        max-height: 240px;
+        overflow-y: auto;
+    }
+}
+
+.address-item {
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-top: 1px solid #f3f4f6;
+
+    &:hover {
+        background-color: #f9fafb;
+    }
+
+    &--selected {
+        background-color: #f9fafb;
+    }
+
+    &__first-line {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    &__alias {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    &__badge {
+         font-size: 0.65rem;
+        font-weight: 700;
+        padding: 0.325rem 0.4rem;
+        border-radius: 4px;
+        color: #fff;
+        text-transform: capitalize;
+        background-color: #000;
+    }
+
+    &__details {
+        font-size: 0.75rem;
+        color: #6b7280;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

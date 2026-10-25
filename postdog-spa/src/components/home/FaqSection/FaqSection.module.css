@@ -1,0 +1,366 @@
+.faq-postdog {
+    background: #171717;
+    color: #fff;
+    padding: 60px 0 40px 0;
+}
+
+.faq-postdog__container {
+    max-width: 2116px;
+    margin: 13px auto;
+    width: 100%;
+    padding-left: 395px;
+}
+
+.faq-postdog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+    margin-right: 76px;
+}
+
+.faq-postdog__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.faq-postdog__content {
+    margin: 0;
+}
+
+.faq-postdog__accordion {
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: none;
+    width: 700px;
+}
+
+.faq-postdog__item {
+    background: transparent;
+    border: 1px solid #fff !important;
+    border-radius: 10px !important;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.faq-postdog__button {
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 11px;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    transition: color 0.2s;
+    height: 50px;
+}
+
+.faq-postdog__button:focus {
+    box-shadow: none;
+}
+
+.faq-postdog__button::after {
+    display: none;
+}
+
+.faq-postdog__item-body {
+    overflow: hidden;
+    height: 0;
+}
+
+.faq-postdog__item-text {
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0 14px 16px 14px;
+    border-top: none;
+}
+
+.faq-postdog__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 250px;
+    margin-left: 34px;
+}
+
+.faq-postdog__toggle {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    transition: all .5s;
+    margin-left: auto;
+}
+
+.faq-postdog__toggle span {
+    transition: all .5s;
+    width: 16px;
+    height: 3px;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.faq-postdog__toggle span:first-child {
+    transform: translate(-50%, -50%);
+}
+
+.faq-postdog__toggle span:last-child {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-postdog__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.faq-postdog__link:hover {
+    color: #DC2626;
+}
+
+.faq-postdog__link:hover svg {
+    transform: translateX(4px);
+}
+
+.faq-postdog__link svg {
+    transition: transform 0.3s ease;
+}
+
+.faq-postdog__title--accent {
+    color: #DC2626;
+}
+
+.faq-postdog__button:not(.faq-postdog__button--collapsed) {
+    color: #DC2626;
+}
+
+.faq-postdog__toggle--open span {
+    background: #DC2626;
+}
+
+.faq-postdog__toggle--open span:last-child {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media (max-width: 1700px) {
+    .faq-postdog__container {
+        padding-left: 181px;
+
+    }
+}
+
+@media (max-width: 1440px) {
+    .faq-postdog {
+        padding: 28px 0 20px 0;
+    }
+
+    .faq-postdog__accordion {
+        max-width: 524px;
+        width: 100%;
+    }
+
+    .faq-postdog__title {
+        font-size: 16px;
+    }
+
+    .faq-postdog__image {
+        max-width: 200px;
+        height: 180px;
+    }
+
+    .faq-postdog__button {
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .faq-postdog__header {
+        margin-right: 110px;
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+
+    .faq-postdog__toggle {
+        width: 12px;
+        height: 12px;
+        top: 13px;
+    }
+
+    .faq-postdog__toggle span {
+        width: 12px;
+        height: 2px;
+    }
+
+    .faq-postdog__link {
+        font-size: 12px;
+    }
+
+    .faq-postdog__item-text {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 0 10px 8px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .faq-postdog__container {
+        max-width: 61rem;
+        padding-left: 53px;
+        margin: 128px auto;
+    }
+
+    .faq-postdog__image {
+        max-width: 160px;
+        margin: 1px auto;
+        height: 144px;
+    }
+
+    .faq-postdog__link {
+        font-size: 14px;
+        justify-content: end;
+    }
+
+    .faq-postdog__toggle {
+        top: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-postdog {
+        padding: 42px 0 43px 0;
+    }
+
+    .faq-postdog__container {
+        max-width: 100%;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .faq-postdog__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-postdog__header {
+        margin-right: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .faq-postdog__title {
+        font-size: 10px;
+    }
+
+    .faq-postdog__accordion {
+        max-width: 400px;
+        width: 100%;
+        margin: 1px auto;
+    }
+
+    .faq-postdog__item {
+        padding-left: 11px;
+    }
+
+    .faq-postdog__button {
+        height: 23px;
+        font-size: 8px;
+        padding: 0;
+    }
+
+    .faq-postdog__toggle {
+        width: 7px;
+        height: 7px;
+        right: 10px;
+        top: 7px;
+    }
+
+    .faq-postdog__toggle span {
+        width: 7px;
+        height: 1px;
+    }
+
+    .faq-postdog__item-text {
+        font-size: 6px;
+        padding: 0px 4px 9px 1px;
+    }
+
+    .faq-postdog__image {
+        max-width: 91px;
+        margin: 13px auto 0;
+        height: 85px;
+    }
+
+    .faq-postdog__link {
+        font-size: 8px;
+        justify-content: end;
+        width: 400px;
+    }
+
+    .faq-postdog__link svg {
+        width: 8px;
+    }
+}
+
+@media (max-width: 430px) {
+    .faq-postdog__header {
+        margin-bottom: 13px;
+    }
+
+    .faq-postdog__container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .faq-postdog__accordion {
+        width: auto;
+    }
+
+    .faq-postdog__button {
+        height: 20px;
+    }
+
+    .faq-postdog__toggle span {
+        width: 7px;
+        height: 1px;
+        top: 6px;
+    }
+
+    .faq-postdog__item {
+        margin-bottom: 9px;
+        padding-left: 7px;
+    }
+
+    .faq-postdog__image {
+        max-width: 78px;
+        margin-top: 8px;
+        height: 85px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .faq-postdog__link {
+        padding-right: 24px;
+    }
+
+    .faq-postdog__toggle {
+        top: 4px;
+    }
+
+}

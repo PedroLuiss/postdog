@@ -1,0 +1,126 @@
+@import '../../../assets/styles/variables_postdog';
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    width: 100%;
+
+    &__label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.25rem;
+        color: rgb(55 65 81 / 1);
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        &:hover {
+            .field__arrows {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__input {
+        display: flex;
+        height: 36px;
+        width: 100%;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+        background-color: transparent;
+        padding: 4px 32px 4px 12px;
+        font-size: 16px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        transition: border-color 150ms, box-shadow 150ms;
+        outline: none;
+        color: #1f1f1f;
+
+        &::file-selector-button {
+            border: 0;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        &::placeholder {
+            color: #64748b;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-color: #94a3b8;
+            box-shadow: 0 0 0 1px #94a3b8;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 14px;
+        }
+
+        &--error {
+            border-color: $border-input-error !important;
+            box-shadow: 0 0 0 1px $border-input-error !important;
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        right: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 150ms ease, visibility 150ms ease;
+    }
+
+    &__arrow-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        cursor: pointer;
+        transition: color 150ms;
+        height: 10px;
+        width: 10px;
+
+        &:hover {
+            color: #64748b;
+        }
+
+        svg {
+            width: 8px;
+            height: 6px;
+        }
+    }
+
+    &__error-message {
+        font-size: 12px;
+        color: $border-input-error;
+        margin-top: 2px;
+    }
+}

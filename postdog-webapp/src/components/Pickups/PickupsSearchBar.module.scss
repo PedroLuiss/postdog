@@ -1,0 +1,141 @@
+@import '../../assets/styles/variables';
+
+$color-secondary-hover-bg: #f5f5f5;
+$border-radius: 6px;
+
+.pickup-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 16px;
+  background-color: white;
+  border-radius: $border-radius-content;
+  box-shadow: $box-shadow-content;
+  font-family: sans-serif;
+
+  &__main-controls {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__search-wrapper {
+    display: flex;
+  }
+
+  &__input {
+    border: 1px solid $color-black;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: $border-radius;
+    min-width: 500px;
+    color: $color-black;
+    height: 40px;
+    width: 100%;
+
+
+    &::placeholder {
+      color: $color-input-placeholder;
+      font-size: 14px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: darken($color-black, 15%);
+      box-shadow: $box-shadow-input-focus;
+    }
+
+    @media (max-width: 1432px) {
+      min-width: 272px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+
+    &-text {
+      svg {
+        margin-right: 0.3rem;
+      }
+    }
+
+    &--icon-only {
+      padding: 8px;
+      width: 38px;
+      border-radius: 0 $border-radius $border-radius 0;
+      background-color: white;
+      color: $color-black;
+
+      &:hover {
+        background-color: $color-secondary-hover-bg;
+      }
+    }
+
+    &--search {
+      border: 1px solid $color-black;
+      background-color: white;
+      color: $color-black;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $color-secondary-hover-bg;
+        border-color: darken($color-black, 50%);
+      }
+    }
+
+    &--secondary {
+      background-color: white;
+      color: $color-black;
+      padding: 8px 6px;
+      width: 150px;
+      font-size: 14px;
+      font-weight: 500;
+      height: 40px;
+
+
+      &:hover {
+        background-color: $color-secondary-hover-bg;
+        border-color: darken($color-black, 10%);
+      }
+    }
+
+    &--update {
+      background-color: $color-primary;
+      color: white;
+      border-color: $color-primary;
+      padding: 8px 20px;
+      width: 150px;
+      font-size: 14px;
+      font-weight: 500;
+      height: 40px;
+
+      &:hover {
+        background-color: $color-primary-hover;
+        border-color: $color-primary-hover;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,195 @@
+.termsPage {
+    background: #fff;
+    min-height: 100vh;
+    padding: 38px 0 48px 0;
+    color: #0A0A0A;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 150px;
+}
+
+.termsPage__container {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 10px 150px;
+}
+
+.termsPage__date {
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    margin-bottom: 16px;
+    font-weight: 500;
+    padding-right: 44px;
+}
+
+.termsPage__date b {
+    font-weight: 600;
+}
+
+.termsPage__title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #111;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.termsPage__title-slogan {
+    color: #DC2626;
+}
+
+.termsPage__sectionTitle {
+    color: #DC2626;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.termsPage__list {
+    padding-left: 18px;
+    margin-bottom: 0px;
+    list-style-type: "- ";
+}
+
+.termsPage__list li {
+    margin-bottom: 0px;
+}
+
+.termsPage__text {
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.termsPage__highlight {
+    color: #DC2626;
+    font-weight: 700;
+}
+
+.termsPage__divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 24px 0;
+}
+
+@media (max-width: 600px) {
+    .termsPage__container {
+        padding: 20px;
+    }
+
+    .termsPage__title {
+        font-size: 20px;
+    }
+
+    .termsPage,
+    .termsPage__date,
+    .termsPage__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .termsPage {
+        margin-top: 120px;
+    }
+
+    .termsPage__date {
+        font-size: 16px;
+
+    }
+
+    .termsPage__title {
+        font-size: 28px;
+        margin-top: 27px;
+        margin-bottom: 39px;
+    }
+
+    .termsPage__text {
+
+        font-size: 14px;
+    }
+
+    .termsPage__container {
+        padding: 10px 68px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .termsPage__date {
+        font-size: 14px;
+    }
+
+    .termsPage {
+        margin-top: 104px;
+        padding: 24px 0 48px 0;
+    }
+
+    .termsPage__title {
+        font-size: 24px;
+    }
+
+    .termsPage__text {
+        font-size: 12px;
+    }
+
+    .termsPage__container {
+        padding: 10px 49px;
+    }
+}
+
+@media (max-width: 768px) {
+    .termsPage {
+        margin-top: 92px;
+        padding: 20px 0 48px 0;
+    }
+
+    .termsPage__date {
+        font-size: 12px;
+    }
+
+    .termsPage__title {
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+
+    .termsPage__sectionTitle {
+        font-size: 10px;
+        margin-bottom: 11px;
+    }
+
+    .termsPage__container {
+        padding: 10px 36px;
+    }
+}
+
+@media (max-width: 430px) {
+    .termsPage {
+        margin-top: 64px;
+        padding: 14px 0 48px 0;
+    }
+
+    .termsPage__date {
+        font-size: 10px;
+        padding-right: 12px;
+    }
+
+    .termsPage__title {
+        font-size: 14px;
+    }
+
+    .termsPage__container {
+        padding: 10px 19px;
+    }
+
+    .termsPage__text {
+        font-size: 8px;
+    }
+}

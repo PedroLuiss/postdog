@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+
+    @media (max-width: 640px) {
+        font-size: 24px;
+    }
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #4b5563;
+    margin-top: 8px;
+    margin-bottom: 0px;
+
+    @media (min-width: 640px) {
+        font-size: 16px;
+    }
+}

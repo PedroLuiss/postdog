@@ -1,0 +1,93 @@
+@import "../../../../assets/styles/_variables_postdog.scss";
+
+.empty-no-result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 500px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 640px) {
+    padding: 4rem 3rem;
+  }
+
+
+  &__illustration {
+    margin-bottom: 1.5rem;
+  }
+
+  &__circle-main {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background-color: $red-primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2);
+  }
+
+  &__icon-primary {
+    color: #ffffff;
+    display: flex;
+    & svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: -0.3rem;
+    right: -0.3rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ffffff;
+    border: 2px solid $red-primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-secondary {
+    color: $red-primary;
+    display: flex;
+    & svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__text-group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 2rem;
+    margin-bottom: .5rem;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__actions {
+    width: auto;
+  }
+}

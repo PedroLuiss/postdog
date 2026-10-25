@@ -1,0 +1,149 @@
+@import "../../../assets/styles/_variables_postdog.scss";
+
+$text-gray-900: #111827;
+$text-gray-600: #4b5563;
+$text-gray-400: #9ca3af;
+$border-color: #e5e7eb;
+
+.package-card {
+  opacity: 1;
+  transform: none;
+  transition: all 0.2s ease;
+
+  &__container {
+    background-color: #ffffff;
+    border: 1px solid $border-color;
+    border-radius: 0.75rem; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); 
+    padding: 1rem; 
+    transition: box-shadow 0.2s ease;
+
+    @media (min-width: 1024px) {
+      padding: 1.5rem; 
+      padding-bottom: 1.58rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    }
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+
+  &__icon-main {
+    width: 1.25rem; 
+    height: 1.25rem;
+    color: $text-gray-400;
+  }
+
+  &__title {
+    font-size: 1.125rem; 
+    font-weight: 600;
+    color: $text-gray-900;
+    margin: 0;
+    line-height: 1.75rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.43rem;
+    font-size: 0.875rem; 
+    color: $text-gray-600;
+  }
+
+  &__detail-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    line-height: 1.25rem;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+  }
+
+  &__icon-detail {
+    width: 1rem; 
+    height: 1rem;
+    color: $text-gray-400;
+
+    &--margin {
+        margin-top: 0.125rem; 
+    }
+  }
+
+  &__separator {
+    color: $text-gray-400;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+
+    @media (min-width: 1024px) {
+      gap: 0.25rem; 
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.188rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem; 
+    color: $text-gray-400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #f3f4f6; 
+      color: $text-gray-900;
+    }
+
+    &--delete:hover {
+      color: #dc2626;
+    }
+
+    &--favorite-active {
+      color: #db2626;
+      &:hover {
+        color: #171717;
+      }
+    }
+
+    svg {
+      width: 1rem; 
+      height: 1rem;
+    }
+  }
+}

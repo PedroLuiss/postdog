@@ -1,0 +1,33 @@
+@import "../../../../assets/styles/_variables_postdog.scss";
+
+.users-stats-skeleton {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+  margin-bottom: 2rem; 
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.stats-card-skeleton {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__value {
+    margin-bottom: 0.25rem;
+  }
+
+  &__unit {
+    margin-top: 0.5rem;
+  }
+}

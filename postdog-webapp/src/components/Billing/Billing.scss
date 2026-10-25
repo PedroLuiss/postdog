@@ -1,0 +1,242 @@
+.billing-view {
+    background-color: #f9fafb;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.text-sm-custom {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.text-base-custom {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.card-title {
+    font-size: 20px;
+    line-height: 28px;
+
+    @media (min-width: 640px) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.billing-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.main-content-area {
+    @media (min-width: 1024px) {
+        grid-column: span 2 / span 2;
+    }
+}
+
+.billing-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    color: hsl(var(--card-foreground));
+}
+
+.card-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+
+    @media (min-width: 640px) {
+        padding: 24px;
+    }
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    @media (min-width: 640px) {
+        flex-direction: row;
+    }
+
+    .input-wrapper {
+        position: relative;
+        flex: 1 1 0%;
+    }
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead tr {
+        background-color: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+        padding: 16px 24px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+
+        &.text-right {
+            text-align: right;
+        }
+    }
+
+    tbody {
+        border-top: 1px solid #e5e7eb;
+
+        tr:not(:last-child) {
+            border-bottom: 1px solid #e5e7eb;
+        }
+    }
+}
+
+.sidebar-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card {
+    @extend .billing-card;
+    padding: 24px;
+
+    .header-flex {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+.icon-box-red {
+    width: 40px;
+    height: 40px;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.label-xs {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.value-sm {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.link-red {
+    color: #dc2626;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.switch-root {
+    display: inline-flex;
+    height: 20px;
+    width: 36px;
+    border-radius: 9999px;
+    background-color: #e5e7eb;
+    transition: background-color 0.2s;
+
+    &[data-state="checked"] {
+        background-color: #dc2626;
+    }
+
+    .switch-thumb {
+        height: 16px;
+        width: 16px;
+        background-color: white;
+        border-radius: 9999px;
+        transition: transform 0.2s;
+
+        &[data-state="checked"] {
+            transform: translateX(16px);
+        }
+    }
+}
+
+.btn-primary-red {
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 16px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #b91c1c;
+    }
+}
+
+.btn-outline {
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f9fafb;
+    }
+}
+
+.mobile-sticky-footer {
+    @media (max-width: 1023px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 2px solid #e5e7eb;
+        padding: 16px;
+        z-index: 50;
+        box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}

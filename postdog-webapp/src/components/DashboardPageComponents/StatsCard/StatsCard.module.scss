@@ -1,0 +1,58 @@
+@import '../../../assets/styles/variables';
+
+.stats-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem; 
+    padding: 1.5rem; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5rem; 
+    }
+
+    &__label {
+        font-size: 0.875rem; 
+        font-weight: 500; 
+        color: #4b5563; 
+        margin: 0;
+        line-height: 1.25rem;
+    }
+
+    &__icon {
+        color: #9ca3af; 
+        display: flex;
+        align-items: center;
+        
+        svg {
+            width: 1rem; 
+            height: 1rem; 
+        }
+    }
+
+    &__value {
+        font-size: 1.5rem; 
+        font-weight: 700; 
+        color: #111827; 
+        margin: 0;
+        line-height: 2rem;
+    }
+
+    &__subtitle {
+        color: #9ca3af; 
+        margin-top: 0.25rem; 
+        font-size: .75rem;
+        line-height: 1rem;
+        margin-bottom: 0;
+    }
+}

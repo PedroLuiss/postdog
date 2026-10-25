@@ -1,0 +1,104 @@
+.unauthorized-state {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+
+    &__decoration {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #9ca3af;
+        padding: 8px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #E5E5E5;
+            color: #DC2626;
+        }
+    }
+
+    &__icon-wrapper {
+        position: relative;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+
+    &__main-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #D32F2F;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &__badge {
+        position: absolute;
+        bottom: -4px;
+        right: -4px;
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        border-radius: 50%;
+        border: 2px solid #D32F2F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #D32F2F;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #111827;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 16px;
+        color: #6B7280;
+        margin-bottom: 40px;
+    }
+
+    &__action-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        background-color: #D32F2F;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #B71C1C;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

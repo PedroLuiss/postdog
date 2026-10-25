@@ -1,0 +1,235 @@
+.section-contact {
+    background: linear-gradient(to bottom, #171717, #000000);
+    color: #fff;
+    padding: 35px 0 0px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section-contact__container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1381px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.section-contact__left {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 13rem;
+    margin-top: 14rem;
+}
+
+.section-contact__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.section-contact__title--accent {
+    color: #DC2626;
+}
+
+.section-contact__subtitle {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 32px;
+    font-weight: 600;
+}
+
+.section-contact__cta-btn {
+    background: #DC2626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 474px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 50px;
+}
+
+.section-contact__cta-btn:hover {
+    background: #b91c1c;
+}
+
+.section-contact__right {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.section-contact__img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+    .section-contact {
+        padding-top: 60px;
+    }
+
+    .section-contact__title {
+        font-size: 32px;
+    }
+
+    .section-contact__subtitle {
+        font-size: 18px;
+    }
+
+    .section-contact__cta-btn {
+        font-size: 18px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .section-contact__title {
+        font-size: 36px;
+    }
+
+    .section-contact__subtitle {
+        font-size: 16px;
+    }
+
+    .section-contact__container {
+
+        max-width: 993px;
+    }
+
+    .section-contact__cta-btn {
+        max-width: 400px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .section-contact__img {
+        max-width: 215px;
+        height: 219px;
+    }
+
+    .section-contact__left {
+        margin-bottom: 9rem;
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .section-contact__container {
+        max-width: 852px;
+        gap: 3px;
+    }
+
+    .section-contact__img {
+        max-width: 190px;
+        height: 194px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-contact__container {
+        display: flow;
+    }
+
+    .section-contact__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        padding-top: 60px;
+    }
+
+    .section-contact__left {
+        max-width: 100%;
+        padding-bottom: 11px;
+        align-items: center;
+        margin-bottom: 78px;
+        margin-top: 28px;
+    }
+
+    .section-contact__right {
+        order: -1;
+    }
+
+    .section-contact__img {
+        max-width: 250px;
+    }
+
+
+    .section-contact__right {
+
+        justify-content: center;
+    }
+
+    .section-contact__img {
+        max-width: 97px;
+        height: 99px;
+    }
+
+    .section-contact__title {
+        font-size: 28px;
+    }
+
+    .section-contact__subtitle {
+        font-size: 12px;
+        margin-bottom: 28px;
+    }
+
+    .section-contact__cta-btn {
+        max-width: 282px;
+        height: 22px;
+        font-size: 12px;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .section-contact__title {
+        font-size: 24px;
+    }
+
+    .section-contact__subtitle {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-contact__img {
+        max-width: 80px;
+        margin-top: 30px;
+        height: 82px;
+    }
+
+    .section-contact {
+        padding-top: 30px;
+    }
+
+    .section-contact__cta-btn {
+        height: 20px;
+        font-size: 10px;
+        padding: 5px;
+        max-width: 237px;
+        width: 100%;
+    }
+}

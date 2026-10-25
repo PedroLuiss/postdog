@@ -1,0 +1,54 @@
+@import "../../../../assets/styles/_variables_postdog.scss";
+
+$purple-bg: #f3e8ff;
+$purple-text: #5b21b6;
+$purple-border: #e9d5ff;
+
+.order-banner {
+  background-color: #f9fafb; 
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.55rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__logo-wrapper {
+    height: 2rem;    
+    width: 2rem;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+  }
+
+  &__order-number {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  &__status-badge {
+    background-color: $purple-bg;
+    color: $purple-text;
+    border: 1px solid $purple-border;
+    padding: 0.125rem 0.5rem; 
+    border-radius: 0.25rem; 
+    font-size: 0.75rem; 
+    line-height: 1rem;
+  }
+
+  &__details {
+    font-size: 0.75rem; 
+    color: #4b5563;
+    margin-top: 0.25rem; 
+    line-height: 1rem;
+  }
+}

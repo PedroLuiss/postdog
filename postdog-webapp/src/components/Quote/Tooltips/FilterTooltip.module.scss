@@ -1,0 +1,113 @@
+@import '../../../assets/styles/variables';
+
+.filter-tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 100;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: 8px;
+    padding: 21px 9px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 18rem;
+    overflow-y: auto;
+
+    &__search-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 3px 4px;
+        border: 1px solid #FFFFFF;
+        border-radius: 6px;
+        background-color: transparent;
+        width: 215px;
+        height: 30px;
+
+        svg {
+            color: $color-white;
+            font-size: 17.49px;
+        }
+    }
+
+    &__search-input {
+        flex-grow: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: $color-white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &__courier-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__courier-item {
+        padding: 4px 8px;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    &__checkbox {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid $color-white;
+        border-radius: 4px;
+        transform: translateY(-0.075em);
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            width: 0.75em;
+            height: 0.75em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em $color-white;
+            transform-origin: bottom left;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+
+        &:checked::before {
+            transform: scale(1);
+        }
+    }
+
+    &__no-results {
+        color: $color-text-secondary;
+        text-align: center;
+        padding: 8px;
+        font-size: 0.875rem;
+    }
+}

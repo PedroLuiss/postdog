@@ -1,0 +1,229 @@
+$primary-red: #DC2626;
+
+.help-section {
+    background: linear-gradient(180deg, #171717 25%, #000000 100%);
+    color: #ffffff;
+    min-height: 894px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 1440px) {
+        min-height: 794px;
+    }
+
+    @media (max-width: 1024px) {
+        min-height: 694px;;
+    }
+
+    &__container {
+        max-width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 250px;
+
+        @media (max-width: 1440px) {
+            gap: 96px;
+            max-width: 946px;
+        }
+
+        @media (max-width: 1024px) {
+            gap: 169px;
+            max-width: 799px;
+        }
+    }
+
+    &__content {
+        flex: 1 1;
+        max-width: 560px;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+            max-width: 387px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 339px;
+        }
+
+        @media (max-width: 390px) {
+            max-width: 302px;
+        }
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 55px;
+        color: white;
+
+        @media (max-width: 1440px) {
+            font-size: 40px;
+            margin-bottom: 45px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 36px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .help-section__text--highlight {
+        color: $primary-red;
+    }
+
+    &__description {
+        font-size: 28px;
+        color: #ffffff;
+        margin-bottom: 55px;
+        line-height: 1.2;
+        font-weight: 600;
+
+        @media (max-width: 1440px) {
+            font-size: 24px;
+            margin-bottom: 45px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 21px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 390px) {
+
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__cta-button {
+        display: inline-block;
+        background-color: #DC2626;
+        color: #ffffff;
+        padding: 10px 22px;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+        max-width: 530px;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            transform: translateY(-2px);
+            background-color: darken($primary-red, 5%);
+        }
+
+        @media (max-width: 1440px) {
+            max-width: 453px;
+            height: 42.83px;
+            font-size: 16px;
+            padding: 11px 14px;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: 374px;
+            height: 35px;
+            font-size: 14px;
+            padding: 7px 6px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 339px;
+            height: 32px;
+            font-size: 12px;
+            padding: 7px 6px;
+        }
+
+        @media (max-width: 390px) {
+            max-width: 286.17px;
+            height: 27px;
+            font-size: 10px;
+            padding: 6px 6px;
+        }
+    }
+
+    &__image-wrapper {
+        flex-shrink: 0;
+    }
+
+    &__image {
+        width: 350px;
+        height: 300px;
+
+        @media (max-width: 1440px) {
+            width: 290px;
+            height: 248px;
+        }
+
+        @media (max-width: 1024px) {
+            width: 243px;
+            height: 208px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .help-section {
+        min-height: 858px;
+
+        &__container {
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 132px;
+        }
+
+        &__image-wrapper {
+            order: -1;
+            margin-bottom: 40px;
+        }
+
+        &__image {
+            width: 222px;
+            height: 190px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .help-section {
+        min-height: 826px;
+
+        &__container {
+            gap: 123px;
+        }
+
+        &__image-wrapper {
+            order: -1;
+            margin-bottom: 40px;
+        }
+
+        &__image {
+            width: 200px;
+            height: 171px;
+        }
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+}

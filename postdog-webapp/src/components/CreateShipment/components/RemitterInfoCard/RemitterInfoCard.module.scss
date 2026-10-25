@@ -1,0 +1,38 @@
+@import '../../../../assets/styles/variables_postdog';
+
+.package-info {
+    &__details {
+        font-size: 0.875rem;
+        color: #4b5563;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__badge {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #fef2f2;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $red-primary;
+        flex-shrink: 0;
+
+        svg {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+    }
+
+    &__address-text {
+        text-transform: capitalize;
+    }
+}

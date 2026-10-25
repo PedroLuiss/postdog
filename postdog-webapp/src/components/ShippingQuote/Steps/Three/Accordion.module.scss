@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/variables';
+
+.accordion {
+    border-radius: 8px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.26);
+    background-color: $color-white;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        cursor: pointer;
+    }
+
+    &__titleContainer {
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: $color-black;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+            width: 1.6rem;
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    &__icon {
+        transition: transform 0.3s ease-in-out;
+        width: 20px;
+        height: 20px;
+    }
+
+    &--open {
+        .accordion__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        padding: 0;
+    }
+}

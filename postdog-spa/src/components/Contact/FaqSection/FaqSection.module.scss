@@ -1,0 +1,333 @@
+$primary-text-color: #000;
+$highlight-color: #DC2626;
+$dark-bg-primary: #171717;
+
+
+:global(body) {
+    background: #ffffff !important;
+}
+
+.faq-section {
+    width: 100%;
+    max-width: 1620px;
+    margin: 90px auto;
+    margin-top: 113px;
+    padding: 0px 21px;
+
+    @media (max-width: 1440px) {
+        max-width: 1160px;
+        margin: 0px auto;
+        margin-top: 120px;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 822px;
+        margin-top: 115px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 616px;
+        margin-top: 80px;
+    }
+
+    @media (max-width: 390px) {
+        max-width: 372px;
+        margin-top: 68px;
+        width: 100%;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        color: $primary-text-color;
+        margin-bottom: 50px;
+
+        &--highlight {
+            color: $highlight-color;
+        }
+
+        @media (max-width: 1440px) {
+            margin-bottom: 36px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            margin-bottom: 41px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 35px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 390px) {
+            margin-bottom: 28px;
+            font-size: 16px;
+        }
+    }
+
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (max-width: 1440px) {
+            gap: 8px;
+        }
+
+        @media (max-width: 1024px) {
+            gap: 6px;
+        }
+
+
+        @media (max-width: 768px) {
+            gap: 5px;
+        }
+
+        @media (max-width: 390px) {
+            gap: 3px;
+        }
+    }
+
+    &__accordion-item {
+        background-color: $dark-bg-primary;
+        border-radius: 5px;
+        overflow: hidden;
+        color: #ffffff;
+    }
+
+    &__accordion-header {
+        padding: 38px 27px 39px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        user-select: none;
+        background-color: $dark-bg-primary;
+        text-align: center;
+
+        @media (max-width: 1440px) {
+            padding: 25px 27px 26px;
+            font-size: 16px;
+            height: 74px;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 16px;
+            font-size: 14px;
+            height: 52px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 11px;
+            font-size: 12px;
+            height: 40px;
+        }
+
+        @media (max-width: 390px) {
+            padding: 7px;
+            font-size: 10px;
+            height: 30px;
+        }
+    }
+
+    &__accordion-content {
+        background-color: $dark-bg-primary;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &--open {
+            max-height: 600px;
+        }
+    }
+
+    &__accordion-content-inner {
+        padding: 0px 100px 40px;
+
+        @media (max-width: 1440px) {
+            padding: 0px 63px 34px;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 0px 35px 25px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0px 23px 25px;
+        }
+
+        @media (max-width: 390px) {
+            padding: 0px 14px 22px;
+        }
+    }
+
+    &__qa-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (max-width: 1440px) {
+            gap: 8px;
+        }
+
+        @media (max-width: 1024px) {
+            gap: 6px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 5px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 4px;
+        }
+
+    }
+
+    &__qa-item {
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+        @media (max-width: 1440px) {
+            padding: 15px;
+        }
+
+        @media (max-width: 1024px) {
+            padding: 7px;
+        }
+
+        @media (max-width: 390px) {
+            padding: 8px;
+        }
+    }
+
+    &__accordion-content--open {
+        .faq-section__qa-item {
+            opacity: 1;
+            transform: translateY(0);
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$i * 0.10}s;
+                }
+            }
+        }
+    }
+
+    &__question {
+        font-weight: 700;
+        font-size: 16px;
+        color: #ffffff;
+        margin: 0 0 10px 0;
+
+        @media (max-width: 1440px) {
+            font-size: 14px;
+            margin: 0 0 6px 0;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
+            margin: 0 0 3.63px 0;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            margin: 0 0 5px 0;
+        }
+
+        @media (max-width: 390px) {
+            font-size: 8px;
+            margin: 0 0 3px 0;
+        }
+    }
+
+    &__answer {
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.5;
+        text-align: center;
+
+        @media (max-width: 1440px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 10px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 8px;
+        }
+
+        @media (max-width: 390px) {
+            font-size: 6px;
+        }
+    }
+
+    &__contact-info {
+        text-align: center;
+        margin-top: 90px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+        line-height: 1.1;
+
+        &__schedule {
+            margin-bottom: 10px;
+
+            @media (max-width: 1440px) {
+                margin-bottom: 11px;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 12px;
+            }
+
+            @media (max-width: 390px) {
+                margin-bottom: 11px;
+            }
+        }
+
+        @media (max-width: 1440px) {
+            font-size: 16px;
+            margin-top: 85px;
+            margin-bottom: 86px;
+        }
+
+        @media (max-width: 1024px) {
+            margin-top: 96.99px;
+            margin-bottom: 97.9px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 390px) {
+            margin-top: 62px;
+            margin-bottom: 62px;
+            font-size: 12px;
+        }
+
+    }
+
+    &__contact-email {
+        color: $highlight-color;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

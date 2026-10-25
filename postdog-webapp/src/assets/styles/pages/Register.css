@@ -1,0 +1,336 @@
+/* Estructura general */
+.login {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login__left {
+    width: 50%;
+    background-color: #0A0A0A;
+    color: #fff;
+}
+
+.login__right {
+    width: 50%;
+    background: #F5F5F5;
+    height: 100dvh;
+}
+
+.login__right > .login__form-container {
+    min-height: calc(100dvh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1 1 auto;
+}
+
+.login__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login__title--accent {
+    color: #DC2626;
+}
+
+.login__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.login__subtitle--accent {
+    color: #DC2626;
+    font-weight: 700;
+}
+
+.login__benefits {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.login__benefit {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.login__benefit strong {
+    font-weight: 500;
+}
+
+.login__icon {
+    font-size: 1.5rem;
+    color: #DC2626;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.login__dog {
+    width: 150px;
+    margin-top: 30px;
+}
+
+.login__top-link {
+    font-size: 0.95rem;
+}
+
+.login__link {
+    color: #222;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.login__form-container {
+    max-width: 480px;
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.login__google-btn {
+    border: 1px solid #0A0A0A;
+    font-weight: 600;
+    font-size: 16px;
+    background: #fff;
+    color: #0A0A0A;
+    transition: background 0.2s;
+    padding: 0.7rem 0;
+}
+
+.login__google-btn:hover {
+    border: 1px solid #0A0A0A;
+    background: #f5f5f5;
+}
+
+.login__google-logo {
+    width: 22px;
+    height: 22px;
+}
+
+.login__divider {
+    width: 100%;
+    color: #0A0A0A;
+    font-size: 1rem;
+    align-items: center;
+}
+.login__divider hr{
+    opacity: 1;
+}
+
+.login__form .form-control {
+    border: 1px solid #0A0A0A;
+}
+.login__form .form-label {
+    font-weight: 600;
+    font-size: 16px;
+}
+.login__form .form-text {
+    color: #0A0A0A;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.login__submit-btn {
+    background: #DC2626;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0.7rem 0;
+    border-radius: 6px;
+    transition: background 0.2s;
+    box-shadow: none;
+}
+
+.login__submit-btn:hover {
+    background: #c62828;
+}
+
+@media (max-width: 900px) {
+
+    .login__left,
+    .login__right {
+        width: 100%;
+        min-height: unset;
+        height: unset;
+    }
+
+    .login {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .login {
+        flex-direction: column;
+    }
+    .login__form-container {
+        max-width: 100vw;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .login__form .form-label {
+        font-size: 15px;
+    }
+    .login__form .form-control {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+    .login__title {
+        font-size: 20px;
+    }
+    .login__subtitle {
+        font-size: 16px;
+    }
+    .login__dog {
+        width: 200px;
+        margin-top: 18px;
+    }
+    .login__benefit {
+        font-size: 15px;
+    }
+    .login__submit-btn {
+        font-size: 15px;
+        padding: 0.6rem 0;
+    }
+    .login__top-link {
+        font-size: 12px;
+    }
+    .login__google-btn {
+        font-size: 15px;
+        padding: 0.6rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .login {
+        flex-direction: column;
+    }
+    .login.reverse {
+        flex-direction: column-reverse;
+    }
+    .login__left, .login__right{
+        min-height: 50dvh;
+    }
+    .login__right > .login__form-container{
+        min-height: auto;
+    }
+
+    .login__title.fs-36 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+/* Contraste para accesibilidad en mensajes de error */
+.login__error {
+    color: #b91c1c;
+    background: #fff0f0;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-top: 2px;
+    padding: 2px 8px;
+    width: 100%;
+}
+
+/* Estilos para campos de teléfono separados */
+.register__phone-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.register__phone-select-wrapper {
+    flex: 0 0 125px;
+    height: 42px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.register__phone-select {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.register__phone-select .flag-dropdown {
+    width: 100% !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.register__phone-select .selected-flag {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 10px !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background-color: #fff !important;
+}
+
+.register__phone-select .selected-flag .flag {
+    position: static !important;
+    order: 1 !important;
+    margin: 0 !important;
+}
+
+.register__phone-select .selected-flag:after {
+    content: var(--dial-code);
+    font-size: 14px;
+    font-weight: 500;
+    color: #0A0A0A;
+    white-space: nowrap;
+    order: 2 !important;
+    margin-left: 8px !important;
+}
+
+.register__phone-select .selected-flag .arrow {
+    display: none !important;
+}
+
+.register__phone-caret {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Dejar que los clics pasen al PhoneInput */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    color: #555;
+    z-index: 2; /* Encima del botón de PhoneInput */
+}
+
+/* Detectar apertura mirando la clase 'open' en el contenedor de PhoneInput que está dentro del wrapper */
+.register__phone-select-wrapper:has(.open) .register__phone-caret,
+.register__phone-select-wrapper:has(.register__phone-select.open) .register__phone-caret {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.register__phone-select .form-control {
+    display: none !important;
+}
+
+.register__phone-select .country-list {
+    overflow-y: auto !important;
+    height: 200px !important;
+    width: 300px !important;
+}
+
+.register__phone-input {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .register__phone-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .register__phone-select-wrapper, .register__phone-input {
+        width: 100%;
+        flex: none;
+    }
+}

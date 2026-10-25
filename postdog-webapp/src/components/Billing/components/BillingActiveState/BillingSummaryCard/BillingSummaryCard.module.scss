@@ -1,0 +1,108 @@
+@import "../../../../../assets/styles/variables_postdog.scss";
+
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .header-flex {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .icon-box-minimal {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+            color: #374151;
+        }
+    }
+
+    .header-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #111827;
+        margin: 0;
+    }
+
+    .items-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .row-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .label-xs {
+        font-size: 14px;
+        color: #6b7280;
+        font-weight: 400;
+    }
+
+    .value-sm {
+        font-size: 14px;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .mini-divider {
+        height: 1px;
+        background-color: #e5e7eb;
+    }
+
+    .font-semibold {
+        font-size: 14px;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .font-bold-lg {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111827;
+    }
+
+    .btn-primary-red {
+        background-color: $red-primary;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        line-height: 20px;
+
+        &:hover:not(:disabled) {
+            background-color: $red-hover;
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(0.5px);
+        }
+
+        &:disabled {
+            opacity: 1;
+            cursor: not-allowed;
+            background-color: #fca5a5;
+        }
+    }
+}

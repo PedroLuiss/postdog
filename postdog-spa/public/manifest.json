@@ -1,0 +1,25 @@
+{
+  "short_name": "PostDog App",
+  "name": "PostDog App",
+  "icons": [
+    {
+      "src": "PostDog-2.png",
+      "sizes": "*",
+      "type": "image/png"
+    },
+    {
+      "src": "PostDog-2.png",
+      "type": "image/png",
+      "sizes": "*"
+    },
+    {
+      "src": "PostDog-2.png",
+      "type": "image/png",
+      "sizes": "*"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#DC2626",
+  "background_color": "#ffffff"
+}

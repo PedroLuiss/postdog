@@ -1,0 +1,12 @@
+@import '../../assets/styles/variables';
+
+.mainPage {
+    background-color: transparent;
+    width: 100%;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-inter !important;
+}

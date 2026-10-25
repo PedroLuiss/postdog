@@ -1,0 +1,138 @@
+@import '../../../assets/styles/variables';
+
+$popover-bg: white;
+$popover-border: $color-gray-200;
+$text-muted: $color-gray-400;
+$accent-color: $color-gray-50;
+
+.calendar-popover {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    z-index: 50;
+    border-radius: 8px;
+    border: 1px solid $popover-border;
+    background-color: $popover-bg;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    outline: none;
+    width: 248px;
+    padding: 0;
+    overflow: hidden;
+    padding: 12px;
+
+    &--right {
+        left: -30px !important;
+        right: 0;
+    }
+}
+
+.calendar {
+    width: 224px;
+    height: 221.19px;
+    font-family: $font-system;
+    margin-bottom: 7px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    &__nav-btn {
+        background: none;
+        border: 1px solid $color-gray-200;
+        border-radius: 6px;
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $color-gray-600;
+        transition: all 0.2s;
+        font-family: $font-system;
+        width: 28px;
+        height: 28px;
+
+        &:hover {
+            background-color: $color-gray-50;
+            color: $color-black;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__current-month {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-gray-900;
+        text-align: center;
+    }
+
+    &__grid {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+        margin: 0 auto;
+        table-layout: fixed;
+    }
+
+    &__weekday {
+        color: $text-muted;
+        font-weight: 500;
+        font-size: 12.8px;
+        text-align: center;
+        padding-bottom: 0px;
+        width: 32px;
+    }
+
+    &__day-cell {
+        padding: 0;
+        text-align: center;
+    }
+
+    &__day {
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        border: none;
+        background: none;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-family: $font-system !important;
+        color: $color-gray-900;
+
+        &:hover:not(&--empty):not(&--selected) {
+            background-color: $accent-color;
+        }
+
+        &--empty {
+            cursor: default;
+        }
+
+        &--outside {
+            color: $color-gray-300;
+            opacity: 0.5;
+        }
+
+        &--today {
+            font-weight: 400;
+            color: #171717;
+            background-color: #f5f5f5;
+        }
+
+        &--selected {
+            background-color: $color-black !important;
+            color: white !important;
+        }
+    }
+}

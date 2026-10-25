@@ -1,0 +1,78 @@
+@import '../../../assets/styles/variables';
+
+.drawer-root {
+    :global(.MuiBackdrop-root) {
+        background-color: #000c !important;
+    }
+}
+
+.drawer-paper {
+    width: 100% !important;
+    max-width: 576px !important;
+    height: 100dvh !important;
+    box-sizing: border-box !important;
+
+    @media (max-width: 600px) {
+        max-width: 100% !important;
+    }
+}
+
+.orders-modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+    font-family: $font-system;
+
+    &__header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 24px 0px;
+        background-color: $color-white;
+
+        @media (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        display: flex;
+        height: 28px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #0a0a0a;
+        align-items: center;
+        line-height: 28px;
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #71717a;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 1;
+            color: #18181b;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

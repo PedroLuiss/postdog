@@ -1,0 +1,128 @@
+.card-empty-state {
+    position: relative;
+    background-color: #ffffff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    padding: 32px;
+    width: 100%;
+
+    @media (min-width: 640px) {
+        padding: 48px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 512px;
+        margin: 0 auto;
+    }
+
+    &__icon-container {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background-color: #dc2626;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+
+        .badge-icon {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: 32px;
+            height: 32px;
+            background-color: #ffffff;
+            border: 2px solid #dc2626;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 16px;
+                height: 16px;
+                color: #dc2626;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 600;
+            color: #111827;
+
+            @media (min-width: 640px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
+        .description {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+
+            @media (min-width: 640px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.btn-billing-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    height: 36px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #dc2626;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    line-height: 20px;
+
+    &:hover {
+        background-color: #b91c1c;
+    }
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px rgba(220, 38, 38, 0.5);
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    svg {
+        pointer-events: none;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,99 @@
+@import '../../../../../assets/styles/variables';
+
+.tableWrapper {
+  background: $color-white;
+  border-radius: $border-radius-content;
+  box-shadow: $box-shadow-sm;
+  padding: 1.5rem;
+}
+
+.table__title {
+  font-family: $font-family-inter;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-black;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid $color-gray-200;
+  padding-bottom: 1rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-family-inter;
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid $color-gray-200;
+    font-size: 0.875rem;
+  }
+
+  th {
+    font-weight: 600;
+    color: $color-gray-600;
+    background-color: $color-gray-50;
+  }
+
+  td {
+    color: $color-gray-900;
+  }
+
+  &__plan {
+    font-weight: 500;
+  }
+
+  &__actionsCol {
+    text-align: right;
+  }
+
+  &__deleteBtn {
+    color: $color-red-600;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      background-color: $color-red-50-alpha;
+      color: $color-red-700;
+    }
+  }
+
+  &__loading, &__empty {
+    padding: 2rem;
+    text-align: center;
+    color: $color-gray-600;
+    font-family: $font-family-inter;
+  }
+
+  &__row--modified {
+    background-color: rgba(#f59e0b, 0.05); // yellowish modified
+    td {
+      border-bottom: 1px solid rgba(#f59e0b, 0.2);
+    }
+  }
+
+  &__row--new {
+    background-color: rgba(#10b981, 0.05); // greenish new
+    td {
+      border-bottom: 1px solid rgba(#10b981, 0.2);
+    }
+  }
+
+  &__input, &__select {
+    margin-bottom: 0;
+    min-width: 100px;
+    
+    // override default bottom margins or field paddings from global inputs
+    > div {
+      margin-bottom: 0;
+    }
+  }
+}
